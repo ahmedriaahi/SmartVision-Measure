@@ -1,0 +1,16 @@
+PySide6>=6.5.0
+matplotlib>=3.7.0
+numpy>=1.24.0
+numpy-stl>=3.0.0
+reportlab>=4.0.0
+
+# ultralytics (YOLOv8-seg) installe automatiquement PyTorch comme
+# dépendance. Prévoir 1 à 3 Go d'espace disque libre et une connexion
+# correcte pour ce paquet en particulier (le plus volumineux du projet).
+ultralytics>=8.1.0
+
+# IMPORTANT — NE PAS installer ce fichier seul avec un simple
+# "pip install -r requirements.txt" : voir requirements_step2.txt et le
+# README pour la procédure d'installation en deux étapes, nécessaire à
+# cause d'un conflit opencv-python / opencv-contrib-python (voir détails
+# dans requirements_step2.txt).

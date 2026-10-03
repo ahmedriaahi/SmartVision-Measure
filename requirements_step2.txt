@@ -1,0 +1,30 @@
+# Étape 2 de l'installation — à exécuter APRÈS requirements.txt.
+#
+# Pourquoi en deux étapes ?
+# ultralytics (dans requirements.txt) tire "opencv-python" comme dépendance.
+# Or opencv-python et opencv-contrib-python installent leurs fichiers dans
+# le MÊME dossier (cv2/) et s'écrasent mutuellement à l'installation.
+# Si opencv-python (sans contrib) s'installe en dernier, le module
+# cv2.aruco perd des fonctions essentielles à ce projet, dont
+# calibrateCameraCharuco (utilisée dans la Partie 1 - Calibration).
+#
+# pip ne garantit pas l'ordre d'installation des paquets listés dans un
+# requirements.txt (voir doc pip : installation en ordre "topologique",
+# pas dans l'ordre des lignes). La seule façon fiable de garantir que
+# opencv-contrib-python a le dernier mot est de l'installer dans une
+# commande pip séparée, après tout le reste.
+#
+# Procédure complète :
+#   pip install -r requirements.txt
+#   pip install --force-reinstall --no-deps -r requirements_step2.txt
+#
+# --force-reinstall est OBLIGATOIRE ici : sans cette option, pip considère
+# qu'opencv-contrib-python est "déjà satisfait" par la version actuellement
+# installée (même si ses fichiers ont été partiellement écrasés par
+# opencv-python) et ne réinstalle rien.
+# --no-deps évite de retélécharger numpy et les autres dépendances déjà en
+# place inutilement.
+#
+# (voir aussi la commande combinée dans le README)
+
+opencv-contrib-python>=4.8.0
