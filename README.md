@@ -18,6 +18,10 @@ Calibration caméra par mire ChArUco, segmentation YOLOv8-seg, mesure des dimens
 
 PySide6 · OpenCV (contrib) · Ultralytics YOLOv8 · NumPy · numpy-stl · Matplotlib · ReportLab
 
+## Démonstration 
+
+https://github.com/user-attachments/assets/eb683a13-775e-466c-b755-d950b996d4a2
+
 ## Installation
 
 Python 3.10 recommandé. Sur Ubuntu : `sudo apt install libxcb-cursor0`
