@@ -76,6 +76,3 @@ src/
 
 La précision de la segmentation dépend du modèle YOLOv8-seg utilisé. Pour de bons résultats, entraîner le modèle sur un dataset de pièces imprimées en 3D.
 
-## Auteur
-
-Ahmed Riahi
